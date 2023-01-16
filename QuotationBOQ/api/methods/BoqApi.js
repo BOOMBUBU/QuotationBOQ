@@ -19,6 +19,7 @@ module.exports = {
         let token = await this.getTokenBOQ();
         let url = process.env.BOQ_GetQuotation_API.replace(key, QuotationNumber);
         let result = await _axios.axios_get(url, {}, token);
+        
         return result;
     }
 }
